@@ -102,3 +102,10 @@ button:hover{
     color:#ffd700;
     margin-bottom:10px;
 }
+.logo{
+    width:100px;
+    height:100px;
+    border-radius:20px;
+    object-fit:cover;
+    margin-bottom:10px;
+}
