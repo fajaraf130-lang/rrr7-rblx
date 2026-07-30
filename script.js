@@ -1,46 +1,53 @@
+function pilih(paket){
+
+document.getElementById("robux").value = paket;
+
+}
+
+
 function order(){
 
-    let robux = document.getElementById("robux").value;
-    let username = document.getElementById("username").value;
-    let wa = document.getElementById("wa").value;
-    let catatan = document.getElementById("catatan").value;
+let username = document.getElementById("username").value;
+let wa = document.getElementById("wa").value;
+let catatan = document.getElementById("catatan").value;
 
 
-    if(username === "" || wa === ""){
-        alert("Silakan isi Username Roblox dan Nomor WhatsApp!");
-        return;
-    }
+if(username == "" || wa == ""){
+
+alert("Isi Username Roblox dan WhatsApp terlebih dahulu!");
+
+return;
+
+}
 
 
-    let nomorToko = "628XXXXXXXXXX"; 
-    // GANTI XXXXXXXXXX DENGAN NOMOR WHATSAPP TOKO
+let paket = document.getElementById("robux").value;
 
 
-    let pesan = 
+let nomorToko = "6287882922046";
+
+
+let pesan = 
 `Halo RRR7 RBLX⚡
 
 Saya ingin order Robux:
 
-🎮 Username Roblox:
+🎮 Username:
 ${username}
 
 💎 Paket:
-${robux}
+${paket}
 
 📱 WhatsApp:
 ${wa}
 
 📝 Catatan:
-${catatan}
-
-Terima kasih.`;
+${catatan}`;
 
 
-    let url = 
-    "https://wa.me/" + nomorToko + 
-    "?text=" + encodeURIComponent(pesan);
-
-
-    window.open(url, "_blank");
+window.open(
+"https://wa.me/"+nomorToko+"?text="+encodeURIComponent(pesan),
+"_blank"
+);
 
 }
